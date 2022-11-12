@@ -6,7 +6,14 @@ const Api: AxiosInstance = axios.create({
 
 Api.defaults.timeout = 300000;
 Api.defaults.headers.post['Content-Type'] = 'application/json';
-Api.interceptors.request.use((config: AxiosRequestConfig) => config, (error: any) => Promise.reject(error));
+Api.interceptors.request.use(
+    (config: AxiosRequestConfig) => config, // handleRequest
+    (error: any) => Promise.reject(error) // handleRequestError
+);
+Api.interceptors.response.use(
+    (response:AxiosResponse) => response, //handleResponse
+    (error:any) => error //handleResponseError
+);
 
 declare global {
     interface ApiResponse<T = any> {

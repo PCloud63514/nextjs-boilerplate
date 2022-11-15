@@ -1,5 +1,5 @@
 import {Exception} from "./exception";
-import {IOptional} from "../@types/opyional";
+import {IOptional} from "../@types/optional";
 
 
 class Optional<T = any> implements IOptional<T> {

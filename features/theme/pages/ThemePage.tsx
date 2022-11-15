@@ -1,15 +1,15 @@
 import React from 'react'
 import Head from "next/head";
 
-export default function AdminPage() {
+export default function ThemePage() {
     return (
         <div>
             <Head>
-                <title>Test</title>
+                <title>Theme</title>
             </Head>
             <main>
-                <h1>ADMIN BOARD</h1>
-                <p>ADMIN</p>
+                <h1>THEME BOARD</h1>
+                <p>Theme</p>
             </main>
         </div>
     );

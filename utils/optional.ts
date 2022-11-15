@@ -1,10 +1,6 @@
-import {Exception} from "./Exception";
+import {Exception} from "./exception";
+import {IOptional} from "../@types/opyional";
 
-export interface IOptional<T> {
-    isPresent(): boolean
-
-    get(): T
-}
 
 class Optional<T = any> implements IOptional<T> {
     private readonly data: T | undefined;

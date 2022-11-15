@@ -17,7 +17,9 @@
     "paths": {
       "@/features/*": ["./features/*"],
       "@/components/*": ["./components/*"],
-      "@/components": ["./components/index.tsx"]
+      "@/components": ["./components/index.tsx"],
+      "@/@types": ["./types/*"],
+      "@/utils": ["./utils/*"]
     }
   },
   "include": [

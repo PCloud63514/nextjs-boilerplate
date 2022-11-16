@@ -1,8 +1,8 @@
 import React from 'react'
-import ThemePage from '@/features/theme/pages/ThemePage'
+import TemplatePage from '@/features/template'
 
 export default function ThemeRoute() {
     return (
-        <ThemePage/>
+        <TemplatePage/>
     )
 }

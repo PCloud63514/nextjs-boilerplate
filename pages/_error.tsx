@@ -1,4 +1,3 @@
-
 const CustomError = () => {
     return (
         <div>

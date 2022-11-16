@@ -1,12 +1,4 @@
-declare global {
-    type IException = {
-        code: number | undefined,
-        message: string | undefined
-        callback: () => void
-    }
-
-}
-
+import {IException} from "@/types";
 
 export class Exception implements IException {
     code: number | undefined;

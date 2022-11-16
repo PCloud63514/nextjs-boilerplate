@@ -1,4 +1,3 @@
-
 const CustomError404 = () => {
     return (
         <div>

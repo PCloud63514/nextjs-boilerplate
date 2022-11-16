@@ -1,6 +1,5 @@
 import {Exception} from "./exception";
-import {IOptional} from "../@types/optional";
-
+import {IOptional} from "@/types";
 
 class Optional<T = any> implements IOptional<T> {
     private readonly data: T | undefined;

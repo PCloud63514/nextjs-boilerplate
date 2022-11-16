@@ -15,11 +15,14 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/features/*": ["./features/*"],
-      "@/components/*": ["./components/*"],
+      "@/types": ["./@types/index.ts"],
+      "@/types/*": ["./@types/*"],
       "@/components": ["./components/index.tsx"],
-      "@/@types": ["./types/*"],
-      "@/utils": ["./utils/*"]
+      "@/components/*": ["./components/*"],
+      "@/features/*": ["./features/*"],
+      "@/styles": ["./@styles/index.tsx"],
+      "@/styles/*": ["./@styles/*"],
+      "@/utils/*": ["./utils/*"]
     }
   },
   "include": [

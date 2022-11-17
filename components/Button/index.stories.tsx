@@ -8,15 +8,10 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}/>;
 
-export const PrimaryTemplate = Template.bind({});
-export const SecondaryTemplate = Template.bind({});
+export const ButtonTemplate = Template.bind({});
 
-PrimaryTemplate.args = {
-    styleType: 'primary',
-    children: "시작하기",
-};
-
-SecondaryTemplate.args = {
-    styleType: 'secondary',
-    children: "시작하기",
+ButtonTemplate.args = {
+    styleType: 'solid',
+    size:  'medium',
+    children: "Button",
 };

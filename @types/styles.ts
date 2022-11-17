@@ -1,14 +1,20 @@
 export type PaletteType = {
-    background: string,
-    foreground: string,
+    /*컬러 요소*/
     primary: string,
     primaryLight: string,
     primaryDark: string,
     secondary: string,
     secondaryLight: string,
     secondaryDark: string,
-    primaryText: string,
-    secondaryText: string
+    /*시맨틱 요소*/
+    accent: string,
+    text: string,
+    textPrimary: string,
+    textSecondary: string,
+    textDisabled: string,
+    background: string,
+    backgroundElevated: string,
+    divider: string,
 };
 
 export type FontType = {

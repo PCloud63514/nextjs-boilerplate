@@ -279,73 +279,90 @@ const _Colors = {
 } as const;
 
 const _DefaultPalette: Styles.PaletteType = {
-    background: _Colors.white,
-    foreground: 'string',
-    primary: 'string',
+    /*컬러 요소*/
+    primary: '',
     primaryLight: '',
-    primaryDark: 'string',
-    secondary: 'string',
-    secondaryLight: 'string',
-    secondaryDark: 'string',
-    primaryText: 'string',
-    secondaryText: 'string'
+    primaryDark: '',
+    secondary: '',
+    secondaryLight: '',
+    secondaryDark: '',
+    text: _Colors.white,
+    /*시맨틱 요소*/
+    background: _Colors.white,
+    backgroundElevated: '',
+    divider:_Colors.gray400,
+    accent: '',
+    textPrimary: '',
+    textSecondary: '',
+    textDisabled: '',
 };
 
 
 const DraculaPalette: Styles.PaletteType = {
     ..._DefaultPalette,
     background: '',
-    foreground: 'string',
     primary: 'string',
     primaryLight: '',
     primaryDark: 'string',
     secondary: 'string',
     secondaryLight: 'string',
     secondaryDark: 'string',
-    primaryText: 'string',
-    secondaryText: 'string'
-} as const;
+} ;
 
 const OneDarkPalette: Styles.PaletteType = {
+    ..._DefaultPalette,
     background: '',
-    foreground: 'string',
     primary: 'string',
     primaryLight: '',
     primaryDark: 'string',
     secondary: 'string',
     secondaryLight: 'string',
     secondaryDark: 'string',
-    primaryText: 'string',
-    secondaryText: 'string'
-} as const;
+};
+
+const BlueLightModePalette: Styles.PaletteType = {
+    ..._DefaultPalette,
+    primaryDark: _Colors.lightBlue700,
+    primaryLight: _Colors.lightBlue100,
+    primary: _Colors.lightBlue500,
+    textPrimary: _Colors.gray900,
+    accent: _Colors.indigoA200,
+    secondary: '',
+    secondaryLight: '',
+    secondaryDark: '',
+    textSecondary: _Colors.gray600
+};
 
 const LightModePalette: Styles.PaletteType = {
     ..._DefaultPalette,
     background: _Colors.white,
-    foreground: '',
-    primary: '',
-    primaryLight: '',
-    primaryDark: '',
-    secondary: '',
-    secondaryLight: '',
-    secondaryDark: '',
-    primaryText: _Colors.black,
-    secondaryText: _Colors.gray400
-} as const;
+    backgroundElevated: _Colors.white,
+    primary: _Colors.white,
+    primaryLight: _Colors.white,
+    primaryDark: _Colors.gray400,
+    accent: _Colors.indigoA200,
+    secondary: _Colors.black,
+    secondaryLight: _Colors.gray700,
+    secondaryDark: _Colors.black,
+
+    textPrimary: _Colors.gray900,
+    textSecondary: _Colors.gray600
+};
 
 const DarkModePalette: Styles.PaletteType = {
     ..._DefaultPalette,
-    background: _Colors.black,
-    foreground: '',
-    primary: '',
+    background: _Colors.gray900,
+    backgroundElevated: _Colors.gray700,
+    primary: _Colors.black,
     primaryLight: '',
     primaryDark: '',
-    secondary: '',
+    secondary: _Colors.white,
     secondaryLight: '',
     secondaryDark: '',
-    primaryText: _Colors.white,
-    secondaryText: _Colors.gray400
-} as const;
+
+    textPrimary: _Colors.gray50,
+    textSecondary: _Colors.gray500
+};
 
 export const Palettes = {
     Dracula: DraculaPalette,

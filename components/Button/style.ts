@@ -3,55 +3,58 @@ import {Components, Styles} from '@/types'
 import {ButtonProps} from "@/types/components";
 
 const styleTable: Record<ButtonProps["styleType"], CSSProp<Styles.ThemeType>> = {
-    primary: css`
-    font-weight: 600;
-    ${({theme}:ThemeStyle) => css`
-      color: ${theme.Palette.primaryText};
-      background: ${theme.Palette.background};
+    solid: css`
+    ${({theme}: ThemeStyle) => css`
+      color: ${theme.Palette.primary};
+      background: ${theme.Palette.secondary};
+      &: hover {
+      }
     `}    
-    &: hover {
-      background-color: orange;
-    }
   `,
-  secondary: css`
-    font-weight: 600;
-    color: 'white';
-    ${({theme}:ThemeStyle) => css`
-      color: ${theme.Palette.secondaryText};
-      background: ${theme.Palette.background};
+    outline: css`
+    ${({theme}: ThemeStyle) => css`
+      color: ${theme.Palette.secondary};
+      background: transparent;
+      border: 1px solid ${theme.Palette.secondary};
+      &: hover {
+        color: ${theme.Palette.primary};
+        background-color: ${theme.Palette.secondary};
+        border: 1px solid transparent;
+      }
     `}
-    &: hover {
-      background-color: 'transparent';
-    }
   `
 };
 
 const sizeTable: Record<ButtonProps["size"], CSSProp<Styles.ThemeType>> = {
     small: css`
-    padding: 0.25rem 0.938rem;
-      ${({theme}:ThemeStyle) => css`
-      font-size: ${theme.Font.Size.small};
+    padding: 1 1.25;
+    width: 80px;
+    height: 20px;
+      ${({theme}: ThemeStyle) => css`
+      font-size: ${theme.Font.Size.medium};
     `}    
   `,
     medium: css`
-    padding: 0.5rem 1.25rem;
-      ${({theme}:ThemeStyle) => css`
+    padding: 1 1.25;
+    width: 100px;
+    height: 30px;
+      ${({theme}: ThemeStyle) => css`
       font-size: ${theme.Font.Size.medium};
     `}    
   `,
     large: css`
-    padding: 0.65rem 5.875rem;
-      ${({theme}:ThemeStyle) => css`
-      font-size: ${theme.Font.Size.large};
-      color: ${theme.Palette.primaryText};
-      background: ${theme.Palette.background};
+    padding: 1 1.25;
+    width: 120px;
+    height: 40px;
+      ${({theme}: ThemeStyle) => css`
+      font-size: ${theme.Font.Size.medium};
     `}    
   `,
 };
 
 export const Container = styled.button`
   border: none;
-  border-radius: 50px;
+  border-radius: 5px;
   white-space: nowrap;
   cursor: pointer;
   transition: 0.5s;

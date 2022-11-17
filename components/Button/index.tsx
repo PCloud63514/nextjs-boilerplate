@@ -12,7 +12,7 @@ function Button({children, ...props}: Components.ButtonProps) {
 const defaultProps: Components.ButtonProps = {
     children: null,
     size: Components.SizeKind.medium,
-    styleType: 'primary'
+    styleType: 'solid'
 };
 
 Button.defaultProps = defaultProps;

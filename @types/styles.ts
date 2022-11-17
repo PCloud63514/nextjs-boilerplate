@@ -1,30 +1,36 @@
-export type Theme = {
-    COLOR: {
-        PRIMARY: { DEFAULT: string };
-        SECONDARY: { DEFAULT: string};
+export type PaletteType = {
+    background: string,
+    foreground: string,
+    primary: string,
+    primaryLight: string,
+    primaryDark: string,
+    secondary: string,
+    secondaryLight: string,
+    secondaryDark: string,
+    primaryText: string,
+    secondaryText: string
+};
+
+export type FontType = {
+    Family : {
+        primary: string,
+        secondary: string
     },
-    TEXT: {
-        DEFAULT: string;
-        DISABLED: string;
-        PLACEHOLDER: string;
-        LIGHT_BLUE: string;
-        WHITE: string;
+    Size: {
+        small: string,
+        medium: string,
+        large: string
     }
 }
 
-export const SizeType = {
-    small: 'small',
-    medium: 'medium',
-    large: 'large'
-} as const;
-export const StyleType = {
-    primary: 'primary',
-    secondary: 'secondary',
-    tertiary: 'tertiary'
-} as const;
+declare global {
+    type ThemeStyle = {
+        theme: ThemeType
+    }
+}
 
-export type SizeType = typeof SizeType[keyof typeof SizeType];
-export type StyleType = typeof StyleType[keyof typeof StyleType];
-
-Object.freeze(SizeType);
-Object.freeze(StyleType);
+export type ThemeType = {
+    name: string,
+    Palette: PaletteType,
+    Font: FontType
+};

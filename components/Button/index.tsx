@@ -1,13 +1,7 @@
-import {ButtonHTMLAttributes} from "react";
-import {SizeType, StrictPropsWithChildren, StyleType} from '@/types'
 import * as Styled from './style'
+import {Components} from "@/types";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    size: SizeType;
-    styleType: StyleType;
-}
-
-function Button({children, ...props}: StrictPropsWithChildren<ButtonProps>) {
+function Button({children, ...props}: Components.ButtonProps) {
     return (
         <Styled.Container {...props}>
             {children}
@@ -15,9 +9,12 @@ function Button({children, ...props}: StrictPropsWithChildren<ButtonProps>) {
     )
 }
 
-Button.defaultProps = {
-    size: SizeType.large,
-    styleType: StyleType.primary,
+const defaultProps: Components.ButtonProps = {
+    children: null,
+    size: Components.SizeKind.medium,
+    styleType: 'primary'
 };
+
+Button.defaultProps = defaultProps;
 
 export default Button

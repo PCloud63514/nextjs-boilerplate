@@ -1,6 +1,5 @@
-import Button from "."
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {StyleType} from '@/types'
+import Button from "."
 
 export default {
     title: "shard/Button",
@@ -11,19 +10,13 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args}/>;
 
 export const PrimaryTemplate = Template.bind({});
 export const SecondaryTemplate = Template.bind({});
-export const TertiaryTemplate = Template.bind({});
 
 PrimaryTemplate.args = {
-    styleType: StyleType.primary,
+    styleType: 'primary',
     children: "시작하기",
 };
 
 SecondaryTemplate.args = {
-    styleType: StyleType.secondary,
-    children: "시작하기",
-};
-
-TertiaryTemplate.args = {
-    styleType: StyleType.tertiary,
+    styleType: 'secondary',
     children: "시작하기",
 };

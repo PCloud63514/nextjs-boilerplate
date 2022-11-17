@@ -11,7 +11,8 @@ module.exports = {
     "addons": [
         "@storybook/addon-links",
         "@storybook/addon-essentials",
-        "@storybook/addon-interactions"
+        "@storybook/addon-interactions",
+        "storybook-addon-styled-component-theme/dist/preset"
     ],
     "framework": "@storybook/react",
     "core": {
@@ -21,11 +22,11 @@ module.exports = {
     webpackFinal: async (config) => {
         config.resolve.alias = {
             ...config.resolve.alias,
+            "@/styles": path.resolve(__dirname, "../@styles"),
             "@/types": path.resolve(__dirname, "../@types"),
             "@/components": path.resolve(__dirname, "../components"),
             "@/features": path.resolve(__dirname, "../features"),
             "@/pages": path.resolve(__dirname, "../pages"),
-            // "@/styles": path.resolve(__dirname, "../styles"),
             "@/utils": path.resolve(__dirname, "../utils"),
             "@public": path.resolve(__dirname, "../public/"),
         };

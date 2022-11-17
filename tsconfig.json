@@ -20,7 +20,7 @@
       "@/components": ["./components/index.tsx"],
       "@/components/*": ["./components/*"],
       "@/features/*": ["./features/*"],
-      "@/styles": ["./@styles/index.tsx"],
+      "@/styles": ["./@styles/index.ts"],
       "@/styles/*": ["./@styles/*"],
       "@/utils/*": ["./utils/*"]
     }

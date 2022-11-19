@@ -1,7 +1,7 @@
 import {Exception} from "./exception";
-import {IOptional} from "@/types";
+import {Utils} from "@/types";
 
-class Optional<T = any> implements IOptional<T> {
+class Optional<T = any> implements Utils.IOptional<T> {
     private readonly data: T | undefined;
 
     static empty<T>(): Optional<T> {

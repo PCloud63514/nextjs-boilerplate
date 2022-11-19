@@ -26,5 +26,7 @@ NextJS 기반 웹 보일러플레이트
 ### dependency
 - **StoryBook**
 - **Styled-Components**
+- **Emotion**
+- **Material UI**
 - **Axios**
 - **eslint**

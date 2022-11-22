@@ -4,8 +4,8 @@ module.exports = {
     "stories": [
         // "../stories/**/*.stories.mdx",
         // "../stories/**/*.stories.@(js|jsx|ts|tsx)",
-        "../components/**/*.stories.@(js|jsx|ts|tsx)",
-        "../features/**/*.stories.@(js|jsx|ts|tsx)",
+        "../src/components/**/*.stories.@(js|jsx|ts|tsx)",
+        "../src/features/**/*.stories.@(js|jsx|ts|tsx)",
         "../pages/**/*.stories.@(js|jsx|ts|tsx)",
     ],
     "addons": [
@@ -23,12 +23,12 @@ module.exports = {
     webpackFinal: async (config) => {
         config.resolve.alias = {
             ...config.resolve.alias,
-            "@/styles": path.resolve(__dirname, "../@styles"),
-            "@/types": path.resolve(__dirname, "../@types"),
-            "@/components": path.resolve(__dirname, "../components"),
-            "@/features": path.resolve(__dirname, "../features"),
+            "@/styles": path.resolve(__dirname, "../src/@styles"),
+            "@/types": path.resolve(__dirname, "../src/@types"),
+            "@/components": path.resolve(__dirname, "../src/components"),
+            "@/features": path.resolve(__dirname, "../src/features"),
             "@/pages": path.resolve(__dirname, "../pages"),
-            "@/utils": path.resolve(__dirname, "../utils"),
+            "@/utils": path.resolve(__dirname, "../src/utils"),
             "@public": path.resolve(__dirname, "../public/"),
         };
 

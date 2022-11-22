@@ -15,14 +15,14 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/types": ["./@types/index.ts"],
-      "@/types/*": ["./@types/*"],
-      "@/components": ["./components/index.tsx"],
-      "@/components/*": ["./components/*"],
-      "@/features/*": ["./features/*"],
-      "@/styles": ["./@styles/index.ts"],
-      "@/styles/*": ["./@styles/*"],
-      "@/utils/*": ["./utils/*"]
+      "@/types": ["./src/@types/index.ts"],
+      "@/types/*": ["./src/@types/*"],
+      "@/components": ["./src/components/index.tsx"],
+      "@/components/*": ["./src/components/*"],
+      "@/features/*": ["./src/features/*"],
+      "@/styles": ["./src/@styles/index.ts"],
+      "@/styles/*": ["./src/@styles/*"],
+      "@/utils/*": ["./src/utils/*"]
     }
   },
   "include": [

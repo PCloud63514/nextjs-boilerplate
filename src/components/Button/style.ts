@@ -1,6 +1,6 @@
 import styled, {css, CSSProp} from "styled-components";
 import {Components, Styles} from '@/types'
-import {ButtonProps} from "@/types/components";
+import {ButtonProps} from "../../@types/components";
 
 const styleTable: Record<ButtonProps["styleType"], CSSProp<Styles.ThemeType>> = {
     solid: css`

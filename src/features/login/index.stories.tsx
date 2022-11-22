@@ -1,4 +1,4 @@
-import LoginFeature from "@/features/login";
+import LoginFeature from "./index";
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
 export default {

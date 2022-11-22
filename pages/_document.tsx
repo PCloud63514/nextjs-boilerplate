@@ -1,7 +1,7 @@
 import Document, {DocumentContext} from "next/document";
 import {ServerStyleSheet} from "styled-components";
 import createEmotionServer from '@emotion/server/create-instance';
-import {createEmotionCache} from '@/utils/pages'
+import {createEmotionCache} from '../src/utils/pages'
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext) {

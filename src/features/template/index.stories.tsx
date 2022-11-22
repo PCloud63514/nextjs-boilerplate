@@ -1,4 +1,4 @@
-import TemplatePage from "@/features/template/index";
+import TemplatePage from "./index";
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
 export default {

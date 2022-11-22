@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from "next/head";
-import {Container, TextField, Unstable_Grid2 as Grid} from '@mui/material'
+import {Button, Container, TextField, Unstable_Grid2 as Grid} from '@mui/material'
 
 export default function LoginFeature() {
     return (
@@ -18,9 +18,9 @@ export default function LoginFeature() {
                     </Grid>
                     <Grid xs={12}>
                         <TextField label={'비밀번호'} variant="filled" type="password"/>
-
                     </Grid>
                 </Grid>
+                <Button placeholder={"LOGIN"}/>
             </main>
         </Container>
     );
